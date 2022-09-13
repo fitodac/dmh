@@ -1,0 +1,525 @@
+
+.hero{
+	background: #444 url('../images/hero-rain.jpg') no-repeat center / cover;
+	color: #fff;
+	height: 100vh;
+	min-height: $hero-min-height;
+	position: relative;
+
+
+
+	> .container{
+		height: 100%;
+		padding: 100px 0;
+		// padding-bottom: 70px;
+		position: relative;
+		z-index: 10;
+	}// > .container
+
+
+	&::before{
+		content: '';
+		@include gradient-vertical(rgba(#000,60%), rgba(#000,0), 0%, 100%);
+		height: 120px;
+		left: 0;
+		right: 0;
+		position: absolute;
+	}//::before
+
+
+	&::after{
+		content: '';
+		@include gradient-horizontal(rgba(#000,60%), rgba(#000,0), 0%, 100%);
+		width: 70%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		position: absolute;
+	}//::before
+
+
+
+
+	/*----------------------------------*/
+	/*	REPORT
+	/*----------------------------------*/
+	.report{
+
+		small{
+			opacity: .5;
+		}//small
+
+
+		.report-title{
+			font-size: 1.7rem;
+			font-weight: 500;
+			line-height: 1.1;
+			padding-bottom: 15px;
+			display: block;
+		}//report-title
+
+
+		.report-content{
+			padding-bottom: 20px;
+		}
+
+		&.has-more-content{
+
+		}//has-more-content
+
+	}//report
+
+
+
+
+	/*----------------------------------*/
+	/*	FORECAST
+	/*----------------------------------*/
+	.forecast{
+
+		.display-3{
+			font-size: 4.6rem;
+			font-weight: 300;
+			line-height: 1;
+			letter-spacing: -3px;
+			text-align: right;
+
+
+			span{
+				// font-weight: 300;
+			}//span
+
+
+			.city{
+				font-size: 3.5rem;
+				width: 390px;
+				display: inline-block;
+				vertical-align: top;
+			}//city
+
+		}//display-3
+
+
+
+
+		.short-description{
+			font-size: 1.7rem;
+			line-height: 41px;
+			text-align: right;
+			padding-bottom: 15px;
+
+
+			.icon{
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 38px;
+				height: 38px;
+				display: inline-block;
+				vertical-align: middle;
+			}//icon
+
+		}//short-description
+
+
+
+		.forecast-today{
+			padding-bottom: 15px;
+
+
+			.col-forecast-today{
+
+				small{
+					font-size: .7rem;
+					font-weight: 600;
+					display: block;
+					opacity: .8;
+				}//small
+
+				span{
+					font-size: 1.5rem;
+				}//span
+
+				.dir{
+					font-size: .8rem;
+				}
+
+			}//col-forecast-today
+
+
+
+
+			.high-low{
+
+				.high{
+					display: inline-block;
+
+					span{
+						font-size: 1.5rem;
+					}//span
+				}//high
+
+				.low{
+					display: inline-block;
+
+					span{
+						font-size: 1rem;
+					}//span
+				}//low
+
+				.high,
+				.low{
+					small{ line-height: 1; }
+				}
+
+			}//high-low
+
+
+
+			.wind{
+
+				.speed{
+					small{
+						display: inline-block;
+					}//small
+				}//speed
+
+				.dir{
+					font-size: .7rem;
+					font-weight: 600;
+					top: -10px;
+					position: relative;
+				}//dir
+
+			}//wind
+
+			
+			svg{
+				vertical-align: top;
+
+				use{
+					fill: #fff;
+				}//use
+			}//svg
+
+
+			.icon-thermo{
+				width: 30px;
+				height: 45px;
+			}//icon-thermo
+
+			.icon-drop{
+				width: 26px;
+				height: 38px;
+			}//icon-drop
+
+			.icon-umbrella{
+				width: 26px;
+				height: 38px;
+			}//icon-umbrella
+
+			.icon-compass{
+				width: 23px;
+				height: 36px;
+			}//icon-compass
+
+
+		}//forecast-today
+
+
+
+
+		.days{
+			padding-bottom: 20px;
+
+			&::after{
+				content: '';
+				clear: both;
+				display: block;
+			}//::after
+
+
+			> div{
+				border-right: solid 1px #fff;
+				text-align: center;
+				width: 20%;
+				// height: 100px;
+				float: left;
+
+				&:last-child{
+					border-right: none;
+				}//:last-child
+
+				span{
+					line-height: 1;
+					display: block;
+				}//span
+			}// > div
+
+
+			.icon{
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 38px;
+				height: 38px;
+				margin-bottom: 13px;
+				display: inline-block;
+				vertical-align: middle;
+			}//icon
+
+			.day-name{
+				font-size: .7rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				padding-bottom: 4px;
+			}//day-name
+
+			.day-date{
+				font-size: 2.2rem;
+				font-weight: 500;
+				letter-spacing: -1px;
+				padding-bottom: 4px;
+			}//day-date
+
+
+
+			.day-high,
+			.day-low{
+				line-height: 0;
+				text-align: left;
+				display: inline-block;
+
+				span{
+					line-height: 1;
+					padding-bottom: 2px;
+				}//span
+
+				small{
+					font-size: .6rem;
+					font-weight: 600;
+					line-height: 1;
+					padding-top: 2px;
+					padding-left: 3px;
+					display: block;
+				}//small
+			}//day-high
+
+
+			.day-high span{
+				font-size: 1.2rem;
+				letter-spacing: -2px;
+			}
+
+
+			.day-low{
+				padding-left: 4px;
+
+				span{
+					font-size: .9rem;
+				}
+
+				small{ 
+					padding-left: 0; 
+				}//small
+			}//day-low
+
+		}//days
+
+
+
+
+		.updated{
+			text-align: right;
+
+			.icon-clock{
+				width: 22px;
+				height: 24px;
+				margin-right: 5px;
+				display: inline-block;
+				vertical-align: top;
+
+				use{ fill: #fff; }
+			}//icon-clock
+		}//updated
+
+
+
+	}//forecast
+
+
+
+	canvas{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+		z-index: 1;
+	}//canvas
+
+
+
+
+
+
+
+	footer{
+		// padding: 15px 0;
+		left: 0;
+		right: 0;
+		bottom: 20px;
+		position: absolute;
+
+
+		.owl-control{
+			text-align: center;
+
+			a{
+				color: rgba(#fff, .6);
+				font-size: 1.2rem;
+				font-weight: 500;
+				line-height: 1;
+				padding: 7px 0;
+				margin: 0 8px;
+				display: inline-block;
+				position: relative;
+				
+
+				&::before{
+					content: '';
+					background: #fff;
+					width: 0;
+					height: 3px;
+					left: 50%;
+					top: -3px;
+					position: absolute;
+					transition: .3s;
+				}//::before
+
+
+
+				&:hover,
+				&:active,
+				&:focus,
+				&.active{
+					color: #fff;
+					text-decoration: none;
+
+					&::before{
+						left: 0;
+						width: 100%;
+					}//::before
+
+				}//hover
+
+			}//a
+		}//owl-control
+
+	}//footer
+
+
+
+
+	&.hero-1{ background-image: url('../images/heros/1.jpg');} // Chaparron
+	&.hero-2{ background-image: url('../images/heros/2.jpg');} // Chaparron disperso
+	&.hero-3{ background-image: url('../images/heros/3.jpg');} // Escasamente nublado
+	&.hero-4{ background-image: url('../images/heros/4.jpg');} // Parcialmente nublado
+	&.hero-5{ background-image: url('../images/heros/5.jpg');} // Despejado
+	&.hero-6{ background-image: url('../images/heros/6.jpg');} // Precipitación dispersa
+	&.hero-7{ background-image: url('../images/heros/7.jpg');} // Chaparrón disperso
+	&.hero-8{ background-image: url('../images/heros/8.jpg');} // Chaparrón
+	&.hero-9{ background-image: url('../images/heros/9.jpg');} // Precipitacion
+	&.hero-10{ background-image: url('../images/heros/10.jpg');} // Mayormente nublado
+	&.hero-11{ background-image: url('../images/heros/11.jpg');} // Mayormente nublado noche
+	&.hero-12{ background-image: url('../images/heros/12.jpg');} // Chaparron noche
+	&.hero-13{ background-image: url('../images/heros/13.jpg');} // Despejado noche
+	&.hero-14{ background-image: url('../images/heros/14.jpg');} // Precipitacion noche
+	&.hero-15{ background-image: url('../images/heros/15.jpg');} // Parcialmente nublado noche
+	&.hero-16{ background-image: url('../images/heros/16.jpg');} // Cubierto noche
+	&.hero-17{ background-image: url('../images/heros/17.jpg');} // Nublado truenos
+	&.hero-18{ background-image: url('../images/heros/18.jpg');} // Parcialmente nublado truenos
+	&.hero-19{ background-image: url('../images/heros/19a.jpg');} // Parcialmente nublado truenos noche
+
+}//hero
+
+
+
+
+
+
+
+
+.full-report{
+	background: rgba(#000,.9);
+	width: 100vw;
+	height: 100vh;
+	min-height: $hero-min-height;
+	left: 0;
+	top: -300vh;
+	position: fixed;
+	transition: .5s ease-out;
+	z-index: 999;
+
+
+	> .container, 
+	> .container > .row{
+		height: 100%;
+	}//container
+
+
+	small{
+		opacity: .6;
+	}
+
+	.h2{
+		font-weight: 500;
+	}//h2
+
+
+	.btn.close{
+		width: 60px;
+		height: 60px;
+		top: 100px;
+		right: 20px;
+	}//btn close
+
+
+	&.active{
+		top: 0;
+	}
+
+	.report-author{
+		padding-top: 30px;
+
+		small{
+			font-size: .7rem;
+			font-weight: 600;
+			display: block;
+			padding-top: 7px;
+			opacity: .7;
+		}//small
+
+
+		span{
+			display: block;
+		}//span
+
+
+		.img-author{
+			width: 60px;
+			height: 60px;
+			margin-right: 15px;
+			display: inline-block;
+			float: left;
+			border-radius: 100px;
+		}
+	}//report-author
+
+}//full-report
+
+
+
+
+
+
+
+

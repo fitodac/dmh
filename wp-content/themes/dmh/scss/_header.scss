@@ -1,0 +1,44 @@
+
+.main-header{
+	padding-top: 15px;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: absolute;
+	z-index: 30;
+	pointer-events: none;
+
+
+	.navbar-brand{
+		height: auto;
+		margin: 0;
+
+		.brand{
+			width: 160px;
+			height: 70px;
+
+			use{ fill: #FFF; }
+
+		}//brand
+
+		a{
+			pointer-events: initial;
+		}
+
+	}//navbar-brand
+
+
+	.gov{
+		width: 145px;
+		margin-top: 10px;
+		// margin-left: 70px;
+		float: right;
+	}//gov
+
+
+}//main-header
+
+
+
+
+

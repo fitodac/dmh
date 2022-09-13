@@ -1,0 +1,526 @@
+/*-----------------------------------------------*/
+/*	RESPONSIVE
+/*	Bootstrap media queries
+/*-----------------------------------------------*/
+@media screen and (max-width: 767px) and (min-width: 480px) {
+
+	.container{
+		width: 100%;
+	}//container
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+	.main-header{
+
+		.navbar-brand .brand{
+			width: 110px;
+		}//brand
+
+		.gov{ width: 100px; }//gov
+
+	}//main-header
+
+
+
+
+
+	// HERO
+	.hero{
+		height: auto;
+
+
+		> .container{
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}//container
+
+
+		> .container > .row{
+			margin-left: 0;
+			width: 100%;
+			flex-flow: column;
+		}//row
+
+
+
+		.forecast{
+			padding-bottom: 50px;
+
+			.display-3{
+				font-size: 2.6rem;
+				letter-spacing: -.9px;
+				text-align: left;
+				padding-bottom: 0;
+
+
+				.city{
+					font-size: 2.3rem;
+					width: auto;
+					padding-right: 10px;
+				}//city
+			}//display-3
+
+
+			.short-description{
+				font-size: 1.3rem;
+				text-align: left;
+
+				span{
+					padding-right: 10px;
+					display: inline-block;
+				}
+			}//short-description
+
+
+			.updated{
+				font-size: .8rem;
+
+				.icon-clock{
+					width: 16px;
+					height: 16px;
+				}//icon-clock
+			}//updated
+
+
+
+
+
+			.forecast-today{
+
+				.col-forecast-today{
+					height: 70px;
+
+					small{
+						height: auto;
+					}//small
+
+					.icon-umbrella{
+						width: 32px;
+						height: 25px;
+					}
+
+				}//col-forecast-today
+
+			}//forecast-today
+
+		}//forecast 
+
+
+
+		.report{
+
+			.report-title{
+				font-size: 1.4rem;
+			}//report-title
+
+		}//report
+
+
+
+		.full-report{
+			height: 100%;
+			padding-top: 80px;
+			top: -100%;
+
+			&.active{ top: 0; }
+
+
+			.btn.close{
+				width: 40px;
+				height: 40px;
+				top: -60px;
+			}
+
+
+			.container{
+				width: calc(100% - 55px);
+				margin: 0;
+
+				.flex{
+					margin: 0;
+
+					> .col-center{
+						flex: 1 0 100%;
+						align-self: flex-start;
+					}//col-
+				}//flex
+			}//container
+
+		}//full-report
+
+
+
+	}//hero
+
+
+
+	// STATIONS
+	.stations{
+		padding: 40px 0;
+
+
+		.location{
+			text-align: center;
+			padding: 0 0 20px;
+
+			span{
+				font-size: .8rem;
+				font-weight: 600;
+			}//span
+
+
+			.h2{
+				font-size: 1.5rem;
+			}//h2
+
+
+			.icon-wifi{
+				display: none;
+			}//icon-wifi
+
+		}//location
+
+
+		.data{
+			width: 300px;
+			margin: 0 auto;
+
+			svg{
+				width: 30px;
+				height: 30px;
+				margin-bottom: 5px;
+			}//svg
+
+			.humidity > span, 
+			.temp > span, 
+			.time > span{
+				font-size: 1.5rem;
+			}
+
+		}//data
+
+
+		> .container > small{
+			padding-top: 15px;
+		}//small
+
+	}//stations
+
+
+
+	// FORECAST COLS
+	.forecasts-cols{
+		padding: 40px 0 50px;
+
+		.owl-item{
+			text-align: center;
+		}//owl-item
+	}//forecasts-cols
+
+
+
+
+	// WEATHER APP
+	.weather-app{
+
+		.content{
+			text-align: center;
+			padding: 40px 0;
+		}//content
+
+		.h2{
+			font-size: 1.3rem;
+		}//h2
+
+		span{
+			font-size: 1.1rem;
+		}//span
+
+
+		.btn-appstore, 
+		.btn-playstore{
+			width: 130px;
+			height: 40px;
+		}
+
+
+		.mobile{
+			width: 280px;
+			margin: 0 auto;
+
+			.screens{
+				width: 226px;
+				height: 150px;
+				top: 15px;
+				right: 34px;
+			}//screens
+		}//mobile
+
+	}//weather-app
+
+
+
+
+	.flex{
+		width: 100%;
+	}
+
+
+
+
+
+	.main-footer::before{
+		width: 470px;
+		height: 70px;
+	}//::before
+
+
+
+	// MAIN FOOTER
+	.main-footer{
+		padding-bottom: 30px;
+
+
+		address{
+			font-size: .8rem;
+			text-align: center;
+			padding-top: 30px;
+			margin-bottom: 40px;
+
+			svg{
+				width: 50px;
+				height: 70px;
+				margin-bottom: 5px;
+			}//svg
+
+		}//address
+
+
+
+		.subfooter{
+
+			.brands{
+				text-align: center;
+				padding-bottom: 20px;
+
+				img{
+					display: inline-block;
+				}//img
+
+				.gov{ width: 80px; }
+				.dinac{ width: 70px; }
+
+			}//brands
+
+
+			.social{
+				text-align: center;
+			}//social
+
+		}//subfooter
+
+	}//main-footer
+
+
+}//max-width: 768px
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+	
+
+	.off-canvas-sidebar{
+		width: 270px;
+		transform: translate3d(-270px, 0px, 0px) !important;
+	}//off-canvas-sidebar
+
+
+	.off-canvas-container{
+		width: 100%;
+	}//off-canvas-container
+
+
+
+	// MAIN HEADER
+	.main-header{
+		padding-left: 45px;
+		pointer-events: initial;
+	}//main-header
+
+
+
+	.navbar-toggler{
+		display: block;
+	}//navbar-toggler
+
+
+
+
+
+	.hero .forecast{
+
+
+		.forecast-today{
+			padding-bottom: 0;
+
+			.col-forecast-today{
+				// height: auto;
+				padding-left: 5px;
+				padding-bottom: 10px;
+
+
+				small{
+					// width: 100px;
+					// float: left;
+					padding-bottom: 5px;
+				}//small
+
+				small + div{
+					width: 120px;
+					float: left;
+					top: -5px;
+					position: relative;
+
+					span{
+						width: 40px;
+					}//span
+				}//small + div
+
+
+				&::after{
+					content: '';
+					display: block;
+					clear: both;
+				}
+
+
+			}//col-forecast-today
+
+
+			> .row > [class^=col-]:first-child{
+				padding-left: 10px;
+			}
+
+		}//forecast-today
+
+
+
+		.days{
+			margin: 0;
+
+			> div{
+				border-right: none;
+				text-align: left;
+				width: 100%;
+				padding: 10px 0 10px 50px;
+				position: relative;
+
+				.icon{
+					width: 34px;
+					height: 34px;
+					margin-bottom: 0;
+					left: 0;
+					top: 20px;
+					position: absolute;
+				}//icon
+
+				.day-high{
+					left: 110px;
+					top: 27px;
+					position: absolute;
+				}//day-high
+
+				.day-low{
+					left: 140px;
+					top: 27px;
+					position: absolute;
+				}//day-low
+
+			}// > div
+
+		}//days
+
+
+
+		.updated{
+			text-align: left;
+		}
+
+	}//hero forecast
+
+
+
+	.hero .full-report .container{
+		width: 100%;
+	}//hero full-report container
+
+	.hero .container{
+		padding-bottom: 50px;
+	}//container
+
+	.hero footer{
+		display: none;
+	}//hero footer
+
+
+
+
+	// WEATHER APP
+	.weather-app{
+
+		.btn-appstore,
+		.btn-playstore{
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+
+
+		.mobile{
+			left: -30px;
+			position: relative;
+		}//mobile
+	}//weather-app
+
+
+
+
+
+
+	// MAIN FOOTER
+	.main-footer{
+
+		.menu{
+			text-align: center;
+
+			.menu-item{
+				font-size: 1rem;
+				font-weight: 500;
+			}
+		}//menu
+
+	}//main-footer
+
+
+}//max-width: 440px
+
+
+
+
+
+
+
+
+

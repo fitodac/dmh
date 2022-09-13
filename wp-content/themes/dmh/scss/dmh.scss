@@ -1,0 +1,348 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i');
+$roboto: 'Roboto Condensed', sans-serif;
+
+
+// VARIABLES
+$dark: 				#40454F;
+$navbar-bg: 	#2B303B;
+
+$primary-1: 	#8F278B;
+$primary-2: 	#2E318E;
+$primary-3: 	#2966AB;
+$primary-4: 	#5A74AE;
+$primary-5: 	#2F95C2;
+$secondary-1: #F7AC3B;
+$secondary-2: #EFCD29;
+$secondary-3: #F8EA21;
+
+$hero-min-height: 640px;
+$content-spacer-x: 30px;
+
+
+
+@import 'mixins';
+
+
+
+html{
+	font-size: 18px;
+}
+
+body{
+	background: $navbar-bg;
+	color: $dark;
+	font-family: $roboto;
+	overflow-x: hidden;
+}//body
+
+
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+	font-weight: 500;
+	letter-spacing: -1px;
+
+	a{
+		color: inherit;
+	}//a
+
+	a:hover,
+	a:active,
+	a:focus{
+		color: $primary-1;
+		text-decoration: none;
+	}
+
+}//h
+
+
+a:hover,
+a:active,
+a:focus{
+	color: $primary-1;
+	text-decoration: none;
+}
+
+
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.lead{ 
+	font-weight: 500; 
+	letter-spacing: -1px;
+}
+
+
+
+
+
+.btn.btn-outline.btn-default:hover,
+.btn.btn-outline.btn-default:active,
+.btn.btn-outline.btn-default:focus{
+	background: rgba(#000,.4);
+	color: #fff;
+}
+
+
+
+.btn.btn-primary{
+	background: $primary-2;
+	border-color: $primary-2;
+
+	&:hover, &:active, &:focus{
+		background: darken($primary-2, 10%);
+		border-color: darken($primary-2, 10%);		
+	}
+}//btn-primary
+
+
+
+
+.card{
+	border-color: transparent;
+	box-shadow: 0 0 20px rgba(#000,.2);
+}
+
+
+
+.off-canvas-wrapper{
+	overflow: hidden;
+	
+	&.push.in .off-canvas-container{
+		transform: translate3d(215px,0,0);
+	}
+
+}//off-canvas-wrapper
+
+
+.off-canvas-container{
+	background: #fff;
+	width: calc(100% - 65px);
+	float: right;
+}//off-canvas-container
+
+
+
+
+.owl-carousel .owl-dots{
+	bottom: -60px;
+
+	.owl-dot{
+		padding-bottom: 0;
+	}//owl-dot
+
+}//owl-dots
+
+
+
+
+
+
+@import 'wordpress';
+@import 'header';
+@import 'navbar';
+@import 'hero';
+@import 'frontpage';
+@import 'page';
+@import 'forecast-alert';
+@import 'publish';
+
+
+
+
+
+.social{
+
+	a{
+		color: rgba(#fff,.7);
+		border: solid 1px transparent;
+		font-size: 20px;
+		line-height: 37px;
+		text-align: center;
+		padding: 0;
+		width: 40px;
+		height: 40px;
+		border-radius: 100px;
+
+		&:hover,
+		&:focus{
+			color: #fff;
+			border-color: #fff;
+		}
+	}//a
+
+}//social
+
+
+
+
+
+
+
+.main-footer{
+	background: #1a1a1a url('../images/dark-clouds.jpg') no-repeat center top / cover;
+	color: #fff;
+	font-size: .9rem;
+	padding: 70px 0 100px;
+	position: relative;
+
+
+	&::before{
+		content: '';
+		background: url('../images/poly.png') left top / cover;
+		width: 930px;
+		height: 150px;
+		right: 0;
+		top: 0;
+		position: absolute;
+		opacity: .4;
+	}//before
+
+
+
+
+	address{
+		font-size: .9rem;
+		text-align: right;
+
+		svg{
+			width: 90px;
+			height: 100px;
+			margin-bottom: 20px;
+
+			use{ fill: rgba(#fff,.6); }
+		}//svg
+
+	}//address
+
+
+	.spacer{
+		height: 100px;
+	}
+
+
+	
+	.list-group{
+
+		.list-group-item{
+			color: rgba(#fff,.8);
+			text-transform: uppercase;
+			line-height: 1;
+			padding-top: 7px;
+			padding-bottom: 7px;
+			border-bottom: none !important;
+			border-radius: 0 !important;
+
+			&:hover, &:active, &:focus{
+				background-color: transparent;
+				color: #fff;
+			}//&:hover
+		}// list-group-item
+	}//list-group
+
+
+
+
+	.menu{
+		padding: 0;
+		margin: 0;
+
+		.menu-item{
+			color: #fff;
+			text-transform: uppercase;
+			list-style: none;
+
+			a{
+				color: rgba(#fff,.7);
+				font-weight: 500;
+				padding: 3px;
+				display: inline-block;
+
+				&:hover, &:active, &:focus{
+					background-color: transparent;
+					color: #fff;
+				}//&:hover
+			}//a
+		}//menu-item
+
+	}//menu
+
+
+
+
+	.nav-small{
+		padding: 40px 0 0;
+
+		.menu{
+			padding: 0;
+			margin: 0;
+
+			.menu-item{
+				color: #fff;
+				text-transform: none;
+				list-style: none;
+				margin-right: 6px;
+				display: inline-block;
+				float: none;
+
+				a{
+					color: rgba(#fff,.7);
+					font-size: .9rem;
+					font-weight: 500;
+					padding: 3px;
+					display: inline-block;
+
+					&:hover, &:active, &:focus{
+						background-color: transparent;
+						color: #fff;
+					}//&:hover
+				}//a
+			}//menu-item
+		
+		}//menu
+
+	}//nav-small
+
+
+	
+	.social{
+		text-align: right;
+	}//social
+
+
+
+
+	.brands{
+		text-align: right;
+	}//brands
+
+	.gov{
+		width: 150px;
+	}//gov
+
+
+	.dinac{
+		width: 120px;
+		margin-left: 20px;
+	}//dinac
+
+
+}//main-footer
+
+
+
+
+@import 'responsive-lg';
+@import 'responsive-md';
+@import 'responsive-sm';
+@import 'responsive-xs';
+
+
+
+
+
+

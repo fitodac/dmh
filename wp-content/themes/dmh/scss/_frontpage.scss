@@ -1,0 +1,273 @@
+/*-------------------------------------------------*/
+/*  STATIONS
+/*-------------------------------------------------*/
+.stations{
+	@include gradient-horizontal(#2e3184, #852781, 0%, 100%);
+	color: #fff;
+	padding: 60px 0 100px;
+
+
+
+	.location{
+		padding-left: 160px;
+		padding-top: 15px;
+		position: relative;
+
+
+		.icon-wifi{
+			width: 140px;
+			height: 140px;
+			left: 0;
+			top: -10px;
+			position: absolute;
+
+			use{ fill: rgba(#fff, .3); }
+		}//icon-wifi
+
+
+		span{
+			font-size: 1rem;
+			font-weight: 500;
+			opacity: .6;
+
+			small{
+				font-size: .7rem;
+				padding-left: 5px;
+				display: inline-block;
+			}//small
+		}//span
+
+
+		.h2{
+			font-size: 2.2rem;
+			font-weight: 500;
+			margin: 0;
+		}//h2
+
+
+	}//location
+
+
+
+
+
+	.data{
+
+		svg{
+			width: 50px;
+			height: 50px;
+			margin: 0 auto 10px;
+			display: block;
+
+			use{ fill: #fff; }
+		}//svg
+
+
+		.temp,
+		.humidity,
+		.time{
+			text-align: center;
+
+			> small{
+				font-size: .9rem;
+				line-height: 1;
+				padding-bottom: 7px;
+				display: block;
+			}//small
+
+			> span{
+				font-size: 2rem;
+				line-height: 1;
+				display: block;
+			}//span
+
+		}// temp / humidity / time
+
+
+	}//data
+
+
+
+
+
+	> .container > small{
+		text-align: center;
+		padding-top: 35px;
+		display: block;
+		opacity: .6;
+	}// > .container > small
+
+
+
+
+
+	.stations-slider{
+
+		.owl-dots{
+			bottom: -100px;
+
+
+			.owl-dot{
+				padding-bottom: 0;
+				vertical-align: middle;
+
+				> span{
+					background: #fff;
+					border-color: #fff;
+					width: 5px;
+					height: 5px;
+					transition: .3s;
+ 				}// > span
+
+
+ 				> span::before{ display: none; }
+
+
+				&.active span,
+				&:hover span{
+					width: 12px;
+					height: 12px;
+				}// :hover span
+
+			}//owl-dot
+
+		}//owl-dots
+
+	}//stations-slider
+
+
+
+
+}//stations
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+/*  FORECAST COLUMNS
+/*-------------------------------------------------*/
+.forecasts-cols{
+	padding: 100px 0 120px;
+
+
+	[class^="col-"]{
+		text-align: center;
+	}//[class^="col-"]
+
+
+}//forecasts-cols
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+/*  WEATHER APP
+/*-------------------------------------------------*/
+.weather-app{
+	background: #d1d9f2;
+	font-weight: 500;
+
+
+	.content{
+		padding: 100px 0;
+	}//content
+
+
+	.h2{
+		font-weight: 500;
+		letter-spacing: -1px;
+		margin-bottom: 5px;
+	}//h2
+
+	span{
+		color: lighten($dark,30%);
+		font-size: 1.3rem;
+		padding-bottom: 25px;
+		display: block;
+	}//span
+
+
+	.btn-appstore,
+	.btn-playstore{
+		font-size: 0;
+		width: 170px;
+		height: 53px;
+		padding: 0;
+	}
+
+	.btn-appstore{
+		background: url('../images/app-store-badge.png') no-repeat center / cover;
+		margin-right: 10px;
+	}//btn-appstore
+	
+	.btn-playstore{
+		background: url('../images/google-play-badge.png') no-repeat center / cover;
+	}//btn-playstore
+
+
+	.mobile{
+		width: 520px;
+		margin-top: 70px;
+		animation: mobileAnim 5s infinite;
+		filter: drop-shadow(-20px 70px 30px rgba(#000,.3));
+
+		img{
+			width: 100%;
+			height: 100%;
+		}// > img
+	}//mobile
+
+
+	.screens{
+		width: 423px;
+		height: 284px;
+		right: 48px;
+		top: 36px;
+		position: absolute;
+		z-index: 30;
+
+		.screen{
+			width: 100%;
+			height: 100%;
+		}//screen
+
+	}//screens
+
+}//weather-app
+
+
+
+
+
+@keyframes mobileAnim{
+  0%{
+    transform: translateY(0);
+    filter: drop-shadow(-20px 70px 30px rgba(#000,.3));
+  }
+
+  50%{
+    transform: translateY(-40px);
+    filter: drop-shadow(0px 100px 60px rgba(#000,.3));
+  }
+
+  100%{
+    transform: translateY(0);
+    filter: drop-shadow(-20px 70px 30px rgba(#000,.3));
+  }
+}
+
+
+
+
+
+
+
+

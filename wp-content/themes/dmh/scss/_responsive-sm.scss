@@ -1,0 +1,189 @@
+/*-----------------------------------------------*/
+/*	RESPONSIVE
+/*	Bootstrap media queries
+/*-----------------------------------------------*/
+@media screen and (max-width: 840px) and (min-width: 767px) {
+
+	.container{
+		width: 700px;
+	}//container
+
+}
+
+
+@media screen and (max-width: 991px) {
+
+
+	.off-canvas-sidebar{
+		width: 270px;
+		transform: translate3d(-215px, 0px, 0px) !important;
+	}//off-canvas-sidebar
+
+
+	.off-canvas-container{
+		width: calc(100% - 55px);
+	}//off-canvas-container
+
+
+
+	.main-header .navbar-brand .brand{
+		width: 120px;
+		height: 50px;
+	}//brand
+
+
+	.hero{
+
+		.report-title{
+			font-size: 1.5rem;
+		}//report-title
+
+
+
+		.forecast{
+
+			.display-3{
+				font-size: 3.5rem;
+				padding-bottom: 10px;
+
+				.city{
+					font-size: 2.5rem;
+					line-height: 1.3;
+					width: 250px;
+				}//city
+
+			}//display-3
+
+
+			.forecast-today{
+
+				> .row > [class^="col-"]{
+					padding-left: 10px;
+					padding-right: 10px;
+
+					&:first-child{
+						padding-left: 15px;
+					}
+
+					&:last-child{
+						padding-right: 15px;
+					}
+				}//col
+
+
+				.col-forecast-today{
+
+					small{
+						height: 30px;
+						display: block;
+					}//small
+
+				}//col-forecast-today
+
+				.icon-thermo{
+					width: 22px;
+					height: 37px;
+				}//icon-thermo
+
+				.icon-drop,
+				.icon-umbrella{
+					width: 20px;
+				}
+
+				.icon-compass{
+					width: 20px;
+				}
+
+			}//forecast-today
+
+
+			.days{
+				margin-left: -15px;
+				margin-right: -15px;
+			}//days
+
+		}//forecast
+
+	}//hero
+
+
+
+	// .nav.nav-stacked .nav-head, 
+	.nav.nav-stacked{
+
+		.icon-thumbnail{
+			height: 30px;
+
+			svg{
+				height: 25px;
+			}//svg
+		}//icon-thumbnail
+
+
+		.nav-link{
+			line-height: 2.1;
+			padding: 7px 7px 7px 15px;
+		}//nav-link
+
+	}//nav-stacked
+
+
+
+
+	// STATIONS
+	.stations{
+
+		.location{
+			padding-left: 90px;
+
+			.icon-wifi{
+				width: 70px;
+				height: 70px;
+				top: 0;
+			}//icon-wifi
+
+			.h2{
+				font-size: 1.8rem;
+			}//h2
+
+		}//location
+
+
+		.data{
+
+			svg{
+				width: 40px;
+				height: 40px;
+			}//svg
+
+			.humidity > small, 
+			.temp > small, 
+			.time > small{
+				height: 30px;
+			}
+
+		}//data
+
+	}//stations
+
+
+
+
+	.nav.nav-stacked .nav-item .subnavbar .nav-item .nav-link{
+		line-height: 1;
+	}//nav-link
+
+
+
+}//max-width: 991px
+
+
+
+
+
+
+
+
+
+
+

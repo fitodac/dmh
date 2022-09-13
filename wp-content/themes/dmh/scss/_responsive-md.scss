@@ -1,0 +1,26 @@
+/*-----------------------------------------------*/
+/*	RESPONSIVE
+/*	Bootstrap media queries
+/*-----------------------------------------------*/
+@media screen and (max-width: 1050px) and (min-width: 991px) {
+
+	.container{
+		width: 920px;
+	}//container
+
+}
+
+
+
+
+@media screen and (max-width: 1050px) {
+
+	.hero .forecast .display-3 .city{
+		width: 330px;
+	}
+
+	.hero .forecast .display-3{
+		font-size: 4.2rem;
+	}
+
+}//max-width: 1050px
